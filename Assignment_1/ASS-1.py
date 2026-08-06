@@ -52,14 +52,6 @@ print("average length of words:", le/len(words))
 dw=pd.DataFrame(words,columns=["text"])
 dw.to_parquet("all_words.parquet",index=False)
 
-print("total sentences:", len(all_sentences))
-
-leng=0
-for k in all_sentences:
-    leng+=len(k)
-
-print("average length of sentences:", leng/len(all_sentences))
-
 unique_words = len(set(words))
 
 print("ttr : ", unique_words/len(words))
